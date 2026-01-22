@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balneabilidade das Praias - Alagoas, Brasil</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        header .fecha {
+            font-size: 0.85rem;
+            margin-top: 8px;
+            background: rgba(255,255,255,0.15);
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 120px);
+            padding: 15px;
+            gap: 15px;
+        }
+
+        #map {
+            flex: 1;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .tabla-container {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tabla-scroll {
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: #333;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .status-icon {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status-propria {
+            background: #22c55e;
+            box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+        }
+
+        .status-impropria {
+            background: #ef4444;
+            box-shadow: 0 0 6px rgba(239, 68, 68, 0.5);
+        }
+
+        .btn-mapa {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.2s;
+        }
+
+        .btn-mapa:hover {
+            background: #2563eb;
+        }
+
+        .temp {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile toggle */
+        .mobile-toggle {
+            display: none;
+            background: white;
+            padding: 10px;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            max-width: 150px;
+            padding: 10px 20px;
+            border: 2px solid #3b82f6;
+            background: white;
+            color: #3b82f6;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .toggle-btn.active {
+            background: #3b82f6;
+            color: white;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 900px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            #map {
+                height: 60vh;
+                flex: none;
+            }
+
+            .tabla-container {
+                height: 60vh;
+                flex: none;
+            }
+
+            #map.hidden, .tabla-container.hidden {
+                display: none;
+            }
+        }
+
+        .descripcion-cell {
+            max-width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .zona-header td {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .descripcion-cell {
+                max-width: 150px;
+            }
+            th, td {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🏖️ Balneabilidade das Praias de Alagoas</h1>
+        <p>Visualizador de dados do relatório REAB do <a href="https://www2.ima.al.gov.br" target="_blank" style="color: #8ecae6;">IMA/AL</a></p>
+        <div class="fecha" id="fecha-actualizacion">Carregando...</div>
+    </header>
+
+    <div class="mobile-toggle">
+        <button class="toggle-btn active" onclick="mostrarVista('mapa')">🗺️ Mapa</button>
+        <button class="toggle-btn" onclick="mostrarVista('tabla')">📋 Lista</button>
+    </div>
+
+    <div class="container">
+        <div id="map"></div>
+        <div class="tabla-container">
+            <div class="tabla-scroll">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Praia</th>
+                            <th>°C</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.js"></script>
+    <script>
+        // Toggle mobile view
+        function mostrarVista(vista) {
+            const mapa = document.getElementById('map');
+            const tabla = document.querySelector('.tabla-container');
+            const btns = document.querySelectorAll('.toggle-btn');
+            
+            if (vista === 'mapa') {
+                mapa.classList.remove('hidden');
+                tabla.classList.add('hidden');
+                btns[0].classList.add('active');
+                btns[1].classList.remove('active');
+                if (window.mapaLeaflet) window.mapaLeaflet.invalidateSize();
+            } else {
+                mapa.classList.add('hidden');
+                tabla.classList.remove('hidden');
+                btns[0].classList.remove('active');
+                btns[1].classList.add('active');
+            }
+        }
+
+        function parsearCoordenada(texto) {
+            const numeros = texto.match(/[\d,.]+/g);
+            const direccion = texto.match(/[SNEW]/);
+
+            if (!numeros || numeros.length < 2 || !direccion) {
+                return null;
+            }
+
+            const grados = parseFloat(numeros[0].replace(',', '.'));
+            const minutos = parseFloat(numeros[1].replace(',', '.'));
+            const segundos = numeros[2] ? parseFloat(numeros[2].replace(',', '.')) : 0;
+
+            let decimal = grados + minutos / 60 + segundos / 3600;
+            if (direccion[0] === 'S' || direccion[0] === 'W') decimal *= -1;
+
+            return decimal;
+        }
+
+        d3.text('DatosPlaya.csv').then(texto => {
+            const textoLimpio = texto.replace(/\r?\n/g, ' ').replace(/\s+/g, ' ').trim();
+            const partes = textoLimpio.split(/(?=(?:^|\s)\d+(?:\.\d)?\s+(?:Praia|Rio|Prainha)\s)/);
+
+            const datos = [];
+
+            for (const p of partes) {
+                const entrada = p.trim();
+                if (!entrada) continue;
+
+                const numMatch = entrada.match(/^(\d+(?:\.\d)?)\s+/);
+                if (!numMatch) continue;
+                const numero = numMatch[1];
+
+                const descMatch = entrada.match(/^\d+\.?\d*\s+(.+?)\s+[-–]\s+/);
+                const descripcion = descMatch ? descMatch[1] : '';
+
+                const categoria = entrada.includes('Imprópria') ? 'Imprópria' :
+                    entrada.includes('Própria') ? 'Própria' : '-';
+
+                const coordMatch = entrada.match(/[-–]\s+(.+?[SW])\s+e\s+(.+?[WE])/);
+                const latRaw = coordMatch ? coordMatch[1] : '-';
+                const lngRaw = coordMatch ? coordMatch[2] : '-';
+
+                // Extraer temperatura (acepta punto o coma como decimal)
+                const tempMatch = entrada.match(/(?:Não|Sim)\s+([\d.,]+)\s+\d+:\d+h/);
+                const temperatura = tempMatch ? tempMatch[1].replace(',', '.') : '-';
+
+                datos.push({ numero, descripcion, latRaw, lngRaw, categoria, temperatura });
+            }
+
+            if (datos.length === 0) {
+                document.body.innerHTML += '<p style="color:orange;text-align:center;padding:20px;">No se pudieron parsear los datos.</p>';
+                return;
+            }
+
+            // Cargar metadatos
+            fetch('metadata.json')
+                .then(r => r.json())
+                .then(meta => {
+                    document.getElementById('fecha-actualizacion').innerHTML = 
+                        `📅 Coleta: ${meta.fecha_coleta} · 📊 ${meta.total_playas} praias · ✅ ${meta.proprias} próprias · ❌ ${meta.improprias} impróprias`;
+                })
+                .catch(() => {
+                    const propias = datos.filter(d => d.categoria === 'Própria').length;
+                    const impropias = datos.length - propias;
+                    document.getElementById('fecha-actualizacion').innerHTML = 
+                        `📊 ${datos.length} praias · ✅ ${propias} próprias · ❌ ${impropias} impróprias`;
+                });
+
+            // Convertir coordenadas
+            datos.forEach(d => {
+                d.lat = parsearCoordenada(d.latRaw);
+                d.lng = parsearCoordenada(d.lngRaw);
+            });
+
+            // Crear mapa
+            const map = L.map('map').setView([-9.5, -35.7], 9);
+            window.mapaLeaflet = map;
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            L.Control.geocoder({
+                defaultMarkGeocode: true,
+                placeholder: 'Buscar...',
+                collapsed: true
+            }).addTo(map);
+
+            // Marcadores
+            const marcadores = {};
+            datos.forEach(d => {
+                if (d.lat && d.lng) {
+                    const color = d.categoria === 'Própria' ? '#22c55e' : '#ef4444';
+                    const icon = L.divIcon({
+                        className: 'marker',
+                        html: `<div style="
+                            background:${color};
+                            width:26px;height:26px;
+                            border-radius:50%;
+                            border:2px solid white;
+                            box-shadow:0 2px 6px rgba(0,0,0,0.3);
+                            display:flex;align-items:center;justify-content:center;
+                            color:white;font-size:10px;font-weight:bold;
+                        ">${d.numero}</div>`,
+                        iconSize: [26, 26],
+                        iconAnchor: [13, 13]
+                    });
+                    const marker = L.marker([d.lat, d.lng], { icon })
+                        .addTo(map)
+                        .bindPopup(`
+                            <b>#${d.numero}</b><br>
+                            ${d.descripcion}<br>
+                            <span style="color:${color};font-weight:bold">${d.categoria}</span>
+                            ${d.temperatura !== '-' ? ` · ${d.temperatura}°C` : ''}
+                        `);
+                    marcadores[d.numero] = marker;
+                }
+            });
+
+            window.verEnMapa = function(numero) {
+                const marker = marcadores[numero];
+                if (marker) {
+                    // En mobile, cambiar a vista mapa
+                    if (window.innerWidth <= 900) {
+                        mostrarVista('mapa');
+                        setTimeout(() => {
+                            map.invalidateSize();
+                            map.setView(marker.getLatLng(), 14);
+                            marker.openPopup();
+                        }, 100);
+                    } else {
+                        map.setView(marker.getLatLng(), 14);
+                        marker.openPopup();
+                    }
+                }
+            };
+
+            // Ordenar de norte a sur (números más altos primero)
+            datos.sort((a, b) => parseFloat(b.numero) - parseFloat(a.numero));
+
+            // Definir zonas
+            function getZona(num) {
+                const n = parseFloat(num);
+                if (n >= 39) return 'Litoral Norte';
+                if (n >= 19) return 'Maceió';
+                return 'Litoral Sul';
+            }
+
+            // Tabla con subheaders
+            const tbody = d3.select('#tabla tbody');
+            let zonaActual = '';
+
+            datos.forEach(d => {
+                const zona = getZona(d.numero);
+                
+                // Insertar subheader si cambia la zona
+                if (zona !== zonaActual) {
+                    zonaActual = zona;
+                    tbody.append('tr')
+                        .attr('class', 'zona-header')
+                        .html(`<td colspan="5">${zona}</td>`);
+                }
+
+                tbody.append('tr')
+                    .html(`
+                        <td><b>${d.numero}</b></td>
+                        <td class="descripcion-cell" title="${d.descripcion}">${d.descripcion}</td>
+                        <td class="temp">${d.temperatura}°</td>
+                        <td><span class="status-icon ${d.categoria === 'Própria' ? 'status-propria' : 'status-impropria'}"></span></td>
+                        <td>${d.lat && d.lng ? `<button class="btn-mapa" onclick="verEnMapa('${d.numero}')">Ver mapa</button>` : '-'}</td>
+                    `);
+            });
+        }).catch(err => {
+            console.error('Error cargando CSV:', err);
+            document.body.innerHTML += '<p style="color:red;text-align:center;padding:20px;">Error cargando datos. Usa un servidor local (npx serve .)</p>';
+        });
+    </script>
+</body>
+
+</html>
