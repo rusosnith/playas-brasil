@@ -214,13 +214,35 @@
                 font-size: 0.85rem;
             }
         }
+
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #8ecae6;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #a8d8f0;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>🏖️ Balneabilidade das Praias de Alagoas</h1>
-        <p>Visualizador de dados do relatório REAB do <a href="https://www2.ima.al.gov.br" target="_blank" style="color: #8ecae6;">IMA/AL</a></p>
+        <p>Visualizador de dados do relatório REAB do <a href="https://www2.ima.al.gov.br" target="_blank" style="color: #8ecae6;">IMA/AL</a>
+        Este visualizador toma los datos del PDF del IMA y lo visualiza en un mapa.</p>
         <div class="fecha" id="fecha-actualizacion">Carregando...</div>
     </header>
 
@@ -450,6 +472,12 @@
             document.body.innerHTML += '<p style="color:red;text-align:center;padding:20px;">Error cargando datos. Usa un servidor local (npx serve .)</p>';
         });
     </script>
+
+    <footer>
+        <p>Hecho por <strong>Andrés Snitcofsky</strong> | 
+        <a href="https://visualizando.ar" target="_blank">visualizando.ar</a> | 
+        <a href="https://twitter.com/rusosnith" target="_blank">@rusosnith</a></p>
+    </footer>
 </body>
 
 </html>
