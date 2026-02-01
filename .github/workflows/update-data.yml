@@ -41,16 +41,19 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          # Prefer rebase when pulling to reconcile divergent branches
+          git config --local pull.rebase true
           # Ensure we have the latest remote commits
           git fetch origin main
           git checkout main
-          git pull --rebase origin main || true
+          # Use --rebase and --autostash to avoid merge commits and handle local modifications
+          git pull --rebase --autostash origin main
           git add DatosPlaya.csv DatosPlaya_completo.csv metadata.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "🏖️ Update beach data - $(date +'%Y-%m-%d')"
             # Rebase our new commit on top of any upstream commits, then push
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
             git push
           fi
