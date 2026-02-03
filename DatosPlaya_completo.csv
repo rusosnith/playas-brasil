@@ -1,63 +1,62 @@
 numero,descripcion,lat_raw,lng_raw,lat,lng,chuva,temperatura,hora,categoria
-1,"Praia do Pontal do Peba/Av. Beira Mar, frente à Pousada do Marinho","10°20’42,56”S","036°18’5,51”W",-10.345155555555555,-36.30153055555555,Não,29.9,09:44h,Própria
-1.1,"Rio São Francisco/Piaçabuçú – Rua Coronel José Leonel, 68 (PIER)","10°24’29,86”S","036°26’05,65”W",-10.408294444444445,-36.43490277777777,Não,28.7,09:34h,Própria
-1.2,Rio São Francisco/Piaçabuçú – Rodovia Dalmo Moreira Santana,"10°23’55,43”S","036°26’46,71”W",-10.398730555555556,-36.44630833333333,Não,28.3,09:09h,Própria
-1.3,"Prainha do Rio São Francisco/ Av. Beira Rio,552","Centro - 10°17’52,64”S","036°34’57,86”W",-10.297955555555555,-36.58273888888889,Não,29.4,08:04h,Própria
-2,"Praia de Feliz Deserto/Av. Gov. Ronaldo Lessa, Frente à Praça Multieventos","10°17’59,02”S","036°17’26,41”W",-10.299727777777777,-36.29066944444444,Não,30.4,09:57h,Própria
-3,Praia de Miai de Baixo/Frente à Rua de Acesso à Praia,"10°13’14,20”S","036°12’57,18”W",-10.220611111111111,-36.21588333333334,Não,29.6,10:09h,Própria
-4,Praia de Miai de Cima/Frente a Rua da Praia,"10°12’07,14”S","036°11’21,67”W",-10.201983333333333,-36.18935277777778,Não,30.8,10:16h,Própria
-5,"Praia do Pontal de Coruripe/Frente ao Farol do Pontal, Frente ao Bar e Restaurante do Baiano","10°09’29,99”S","036º08’10,92”W",-10.158330555555557,-36.13636666666667,Não,29.6,11:00h,Própria
-6,"Praia da Lagoa do Pau/Frente da Barraca Carraspana, Poxim","10°07’44,87”S","036º06’34,12”W",-10.129130555555555,-36.10947777777778,Não,28.8,11:14h,Própria
-7,Praia de Duas Barras/± 200m ao Sul da Foz do Rio Jequiá,"10°02’57,36”S","036°01’54,36”W",-10.049266666666666,-36.03176666666666,Não,27.4,11:43h,Própria
-7.1,"Prainha da Laguna Jequiá da Praia/Rua Santo Antônio, Centro","10°00’24,21”S","036º01’26,07”W",-10.006725,-36.02390833333333,Não,28.6,12:12h,Própria
-8,Praia de Duas Barras/Foz do Rio Jequiá,"10°03’1,21”S","036°01’53,27”W",-10.050336111111111,-36.03146388888889,Não,29.9,11:51h,Própria
-9,Praia de Lagoa Azeda/Frente à Rua Antenor Nunes,"09°58’16,01”S","035°58’47,14”W",-9.971113888888889,-35.97976111111111,Não,30.7,12:09h,Própria
-10,Praia do Gunga/±200m da Foz da Lagoa do Roteiro,"09°51’40,49”S","035°54’16,96”W",-9.861247222222222,-35.90471111111111,Não,29.8,12:23h,Própria
-12,"Praia de Atalaia/ Barra de São Miguel,Rua São Pedro","09°50’39,93”S","035°54’23,79”W",-9.844425000000001,-35.90660833333333,Não,30.4,12:43h,Própria
-13,Praia da Barra de São Miguel/ Frente à Rua Edson Frazão,"09°50’19,77”S","035°53’19,90”W",-9.838825,-35.88886111111111,Não,28.8,12:50h,Própria
-13.1,"Rio Niquim/ Barra se São Miguel, ±300m da Foz",09°50’38.62”S,35°53’56.36”W,-9.844061111111111,-35.89898888888889,Não,29.7,13:00h,Imprópria
-15,"Praia do Francês/ Vila dos Pescadores, Frente à Nareia Beach Bar","09°46’17,97”S","035°50’30,12”W",-9.771658333333335,-35.8417,Não,30.6,13:27h,Própria
-16,"Praia do Francês/ Av Verdes Mares, prox. à Rua Massunim","09°46’15,02”S","035°50’24,47”W",-9.770838888888889,-35.84013055555556,Não,29.9,13:33h,Própria
-17,"Praia do Francês/Av. Verdes Mares, Frente ao Restaurante e Petiscaria da Lara","09°46’04,85""S","035°50’16,16”W",-9.76801388888889,-35.83782222222222,Não,31.0,13:40h,Própria
-19,Praia do Pontal da Barra/Av. Assis Chateaubriand/Frente ao Motonaútica,"09°41’51,34”S","035°46’36,77”W",-9.697594444444444,-35.77688055555556,Não,26.3,07:04h,Imprópria
-20,"Praia do Pontal da Barra/Av. Assis Chateaubriand, ao BOPE – 09°41’22,70”S; 035°46’04,7”W Não 26,4 07:10h Imprópria 21 Praia do Pontal da Barra/Av. Assis Chateaubriand, frente ao SINDIFISCO","09°40’38,38”S","035°45’14,82”W",-9.677327777777776,-35.75411666666667,Não,26.5,07:13h,Imprópria
-22,"Praia do Pontal da Barra/Av. Assis Chateaubriand, ±500m ao Norte do Emissário da CASAL","09°40’26,94”S","035°44’56,37”W",-9.67415,-35.74899166666667,Não,26.6,07:21h,Imprópria
-23,"Praia da Avenida/Av. da Paz, frente ao Posto SHELL","09°40’15,99”S","035°44’25,40”W",-9.671108333333333,-35.74038888888889,Não,26.4,07:27h,Imprópria
-24,"Praia da Avenida/Av. Assis Chateaubriand, interseção com a Rua Barão de Anadia","09°40’13,56”S","035°44’07,30''W",-9.670433333333333,-35.73536111111111,Não,26.2,07:32h,Imprópria
-25,"Praia da Pajuçara/Av. Dr Antônio Gouveia, interseção com a Rua João Carneiro","09°40’24,83”S","035°42’57,66”W",-9.673563888888888,-35.71601666666667,Não,27.0,07:38h,Imprópria
-26,"Praia da Pajuçara/Av. Dr Antônio Gouveia, frente ao Restaurante Parmegiano","09°39’56,47”S","035°42’34,33”W",-9.665686111111112,-35.70953611111111,Não,27.0,07:42h,Imprópria
-27,"Praia da Ponta Verde/Av. Silvio Carlos Viana, frente Corretora Márcio Raposo","09°39’52,45”S","035°41’57,41”W",-9.664569444444444,-35.69928055555555,Não,27.8,07:48h,Imprópria
-28,"Praia de Ponta Verde/Av. Álvaro Otacílio, entre as Ruas General. Dr. João Saleiro Pitão e Dr.Rubens Canuto","09°39’37,96”S","035°41’48,89”W",-9.660544444444445,-35.696913888888886,Não,27.9,07:50h,Imprópria
-29,"Praia de Jatiúca/Av. Álvaro Otacílio, frente ao Hotel Maceió Atlantic","09°38’57,10”S","035°41’59,30”W",-9.649194444444444,-35.69980555555555,Não,27.0,07:59h,Imprópria
-30,"Praia de Cruz das Almas/Av. Brigadeiro Eduardo Gomes, frente ao RITZ Residence","09°38’18,60”S","035°41’53,53”W",-9.638499999999999,-35.69820277777777,Não,27.0,08:05h,Própria
-31,"Praia de Cruz das Almas/ Av. Eustáquio Gomes, frente ao Condomínio Solaris","09°37’59,14”S","035°41’48,21”W",-9.633094444444446,-35.696724999999994,Não,27.0,08:10h,Própria
-32,"Praia de Cruz das Almas/Av. Eustáquio Gomes, frente ao Leroy Merlin","09°37’42,60”S","035°41’44,01”W",-9.6285,-35.69555833333333,Não,27.8,08:15h,Própria
-33,"Praia de Jacarecica/Rua Herry V. Vieira de Paula, Frente à Rua""A”","09°36’48,55”S","035°41’15,66”W",-9.613486111111111,-35.68768333333333,Não,27.6,08:21h,Imprópria
-34,"Praia de Guaxuma/Frente à entrada principal de acesso, Ao lado do Mariali Maceió","09°35’32,25”S","035°40’05,11”W",-9.592291666666668,-35.66808611111111,Não,28.0,08:30h,Própria
-35,"Praia de Garça Torta/Frente à Rua principal, perpendicular à Rua São Pedro","09°35’00,25”S","035°36’35,26”W",-9.583402777777778,-35.60979444444445,Não,28.0,08:39h,Própria
-36,Rio Pratagy/Ponte AL,"101, Norte - 09°34’01,97”S","035°39’01,99”W",101.15944444444445,-35.650552777777776,Não,26.9,08:43h,Própria
-37,"Praia do Mirante da Sereia/Av. Beira Mar, frente à Rua de principal acesso","09°33’55,51”S","035°38’42,67”W",-9.565419444444446,-35.64518611111111,Não,27.0,08:48h,Própria
-38,"Praia de Ipioca/Rua Hilda de Melo Aciole, Frente à Rua de principal acesso e ao lado do Residence Water Front","09°31’51,91”S","035°36’17,47”W",-9.531086111111112,-35.60485277777778,Não,27.4,08:55h,Própria
-39,"Praia de Paripueira/Av. Beira Mar, frente a Barraca do Osvaldo","09º28’16,74”S","35º32’55,76”W",-9.471316666666667,-35.54882222222222,Não,28.8,05:42h,Própria
-40,"Praia de Paripueira/Rua Jair Mendonça, ± 900 m da rua principal de acesso","09º28’09,6”S","035º32’46,50”W",-9.469333333333333,-35.54625,Não,28.7,05:48h,Própria
-41,Praia de Sonho Verde/Frente à ao Condomínio Sonho Verde,"09º27’06,55”S","035º31’46,34”W",-9.451819444444444,-35.52953888888889,Não,28.4,05:56h,Própria
-42,"Praia de Barra de Santo Antônio/Rua Projetada Um, frente à entrada do Loteamento Tabuba","09º26’24,69”S","035º31’6,41”W",-9.440191666666667,-35.51844722222222,Não,30.2,06:09h,Própria
-43,"Praia de Maré Mansa/Barra de Santo Antônio, Rua Projetada 110, Loteamento Barra Norte","09º25’27,87”S","035º30’12,14”W",-9.424408333333332,-35.503372222222225,Não,29.4,06:22h,Própria
-44,"Praia de Barra de Camaragibe/Rua São José, Inicio da Rua Beira Mar","09º18’49,37”S","035º24’53,73”W",-9.31371388888889,-35.414925,Não,29.7,07:06h,Própria
-45,"Praia S. Miguel dos Milagres/Rua Prof. Augusto de Barros Falção, frente ao Restaurante Mija Della","09º16’01,72”S","035º21’53,93” W",-9.267144444444446,-35.364980555555555,Não,28.9,07:19h,Própria
-46,Praia de Porto da Rua/Rua Agnelo João dos Santos,"09º14’39,58”S","035º20’50,80”W",-9.244327777777777,-35.34744444444445,Não,27.8,07:33h,Própria
-47.1,Praia do Patacho/ Rua do Posto Patacho,"09º11’3,67’’S","035º18’2,29” W",-9.184352777777779,-35.30063611111111,Não,28.9,07:57h,Própria
-47.2,"Praia de Lages/Acesso Principal, em frente ao Quiosqui Sol, Lua e Mar – 9° 12’ 3,357’’S e 35° 19’ 16,251’’W Não 30,1 08:05h Própria 48 Praia de Porto de Pedras/Frente à Rua Coronel Avelino","09º09’44,47”S","035º17’43,54”W",-9.162352777777778,-35.295427777777775,Não,29.9,08:18h,Própria
-49,Praia de Japaratinga/Frente à Acesso a Pousada do Alto,"09°05’39,4”S","035°15’30,5”W",-9.094277777777778,-35.258472222222224,Não,29.8,09:00h,Própria
-50,"Praia de Japaratinga/Rua Sebastião Lins de Melo, 41, Frente ao Restaurante Maria Pereira","09º05’19,55”S","035º15’23,38”W",-9.08876388888889,-35.25649444444444,Não,28.0,09:10h,Própria
-51,Praia de Maragogi/Frente à Foz do Rio Salgado,"09º04’0,27”S","035º14’32,67”W",-9.066741666666667,-35.24240833333334,Não,28.4,09:22h,Própria
-52,"Praia de Maragogi/Frente à Escola Manoel M. Costa, Povoado São Bento","09º03’10,25”S","035º14’22,03”W",-9.052847222222223,-35.23945277777778,Não,28.6,09:52h,Própria
-53,"Praia de Maragogi/Foz do Rio Maragogi, AL","101 Norte - 09º01’54,14”S","035º13’46,49”W",101.15027777777779,-35.22958055555556,Não,28.9,10:16h,Imprópria
-54,"Praia de Maragogi/Av. Senador Rui Palmeira, Frente ao Hotel Areias Belas","09º01’03,79”S","035º13’22,45”W",-9.017719444444445,-35.22290277777778,Não,30.4,10:27h,Própria
-55,"Praia de Maragogi/Av. Senador Rui Plameira, Frente ao Restaurante Maragomar","09º00’38,61”S","035º13’06,79”W",-9.010725,-35.21855277777778,Não,30.7,10:35h,Própria
-56,"Praia de Maragogi/Barra Grande, frente à Av. Jubarte","08º59’15,8”S","035º11’35,88”’W",-8.98772222222222,-35.193299999999994,Não,31.1,10:47h,Própria
-57,Praia de Burgalhau/Frente ao Restaurante Burgalhau – Barra Grande,"08° 59’ 51,69""S","035°12’ 23,92”W",-8.997691666666666,-35.20664444444445,Não,36.9,11:03h,Própria
-58,"Praia de Antunes/Barra Grande, Área de frequência de banhistas","08°58’33,10""S","035°10’ 49,74’’W",-8.975861111111112,-35.18048333333333,Não,29.9,11:26h,Própria
-59,"Praia de Ponta de Mangue/ Av. Estrela do Mar, frente ao Bar da Praia Porto do Sal","08°57’23,53""S","035°10’21,52""W",-8.956536111111111,-35.172644444444444,Não,28.4,11:40h,Própria
-59.1,"Praia Peroba/Frente ao acesso principal, Área de frequência de banhistas",08°56’07”S,035°10’01” W,-8.935277777777777,-35.16694444444444,Não,28.8,11:57h,Própria
-60,Praia de Maragogi/Frente à Foz do Rio Persinunga,"08º54’48,80”S","035º09’14,64”W",-8.913555555555556,-35.154066666666665,Não,27.9,12:22h,Imprópria
+1,"Praia do Pontal do Peba/Av. Beira Mar, frente à Pousada do Marinho","10°20’42,56”S","036°18’5,51”W",-10.345155555555555,-36.30153055555555,Não,29.7,09:00h,Própria
+1.1,"Rio São Francisco/Piaçabuçú – Rua Coronel José Leonel, 68 (PIER)","10°24’29,86”S","036°26’05,65”W",-10.408294444444445,-36.43490277777777,Não,28.6,08:45h,Própria
+1.2,Rio São Francisco/Piaçabuçú – Rodovia Dalmo Moreira Santana,"10°23’55,43”S","036°26’46,71”W",-10.398730555555556,-36.44630833333333,Não,28.7,08:36h,Própria
+1.3,"Prainha do Rio São Francisco/ Av. Beira Rio,552","Centro - 10°17’52,64”S","036°34’57,86”W",-10.297955555555555,-36.58273888888889,Não,28.9,08:00h,Própria
+2,"Praia de Feliz Deserto/Av. Gov. Ronaldo Lessa, Frente à Praça Multieventos","10°17’59,02”S","036°17’26,41”W",-10.299727777777777,-36.29066944444444,Não,30.2,09:20h,Própria
+3,Praia de Miai de Baixo/Frente à Rua de Acesso à Praia,"10°13’14,20”S","036°12’57,18”W",-10.220611111111111,-36.21588333333334,Não,30.7,09:31h,Própria
+4,Praia de Miai de Cima/Frente a Rua da Praia,"10°12’07,14”S","036°11’21,67”W",-10.201983333333333,-36.18935277777778,Não,29.9,09:44h,Própria
+5,"Praia do Pontal de Coruripe/Frente ao Farol do Pontal, Frente ao Bar e Restaurante do Baiano","10°09’29,99”S","036º08’10,92”W",-10.158330555555557,-36.13636666666667,Não,30.6,10:29h,Própria
+6,"Praia da Lagoa do Pau/Frente da Barraca Carraspana, Poxim","10°07’44,87”S","036º06’34,12”W",-10.129130555555555,-36.10947777777778,Não,30.8,10:40h,Própria
+7,Praia de Duas Barras/± 200m ao Sul da Foz do Rio Jequiá,"10°02’57,36”S","036°01’54,36”W",-10.049266666666666,-36.03176666666666,Não,29.9,11:07h,Própria
+7.1,"Prainha da Laguna Jequiá da Praia/Rua Santo Antônio, Centro","10°00’24,21”S","036º01’26,07”W",-10.006725,-36.02390833333333,Não,28.8,11:27h,Própria
+8,Praia de Duas Barras/Foz do Rio Jequiá,"10°03’1,21”S","036°01’53,27”W",-10.050336111111111,-36.03146388888889,Não,30.6,11:13h,Própria
+9,Praia de Lagoa Azeda/Frente à Rua Antenor Nunes,"09°58’16,01”S","035°58’47,14”W",-9.971113888888889,-35.97976111111111,Não,31.0,11:52h,Própria
+10,Praia do Gunga/±200m da Foz da Lagoa do Roteiro,"09°51’40,49”S","035°54’16,96”W",-9.861247222222222,-35.90471111111111,Não,29.7,12:15h,Própria
+12,"Praia de Atalaia/ Barra de São Miguel,Rua São Pedro","09°50’39,93”S","035°54’23,79”W",-9.844425000000001,-35.90660833333333,Não,29.8,12:32h,Própria
+13,Praia da Barra de São Miguel/ Frente à Rua Edson Frazão,"09°50’19,77”S","035°53’19,90”W",-9.838825,-35.88886111111111,Não,29.6,12:41h,Própria
+13.1,"Rio Niquim/ Barra se São Miguel, ±300m da Foz",09°50’38.62”S,35°53’56.36”W,-9.844061111111111,-35.89898888888889,Não,30.4,12:49h,Imprópria
+15,"Praia do Francês/ Vila dos Pescadores, Frente à Nareia Beach Bar","09°46’17,97”S","035°50’30,12”W",-9.771658333333335,-35.8417,Não,30.2,13:17h,Própria
+16,"Praia do Francês/ Av Verdes Mares, prox. à Rua Massunim","09°46’15,02”S","035°50’24,47”W",-9.770838888888889,-35.84013055555556,Não,29.9,13:23h,Própria
+17,"Praia do Francês/Av. Verdes Mares, Frente ao Restaurante e Petiscaria da Lara","09°46’04,85""S","035°50’16,16”W",-9.76801388888889,-35.83782222222222,Não,30.4,13:30h,Própria
+19,Praia do Pontal da Barra/Av. Assis Chateaubriand/Frente ao Motonaútica,"09°41’51,34”S","035°46’36,77”W",-9.697594444444444,-35.77688055555556,Não,27.0,07:30h,Imprópria
+20,"Praia do Pontal da Barra/Av. Assis Chateaubriand, ao BOPE – 09°41’22,70”S; 035°46’04,7”W Não 27,0 07:35h Própria 21 Praia do Pontal da Barra/Av. Assis Chateaubriand, frente ao SINDIFISCO","09°40’38,38”S","035°45’14,82”W",-9.677327777777776,-35.75411666666667,Não,27.2,07:40h,Imprópria
+22,"Praia do Pontal da Barra/Av. Assis Chateaubriand, ±500m ao Norte do Emissário da CASAL","09°40’26,94”S","035°44’56,37”W",-9.67415,-35.74899166666667,Não,27.1,07:43h,Imprópria
+23,"Praia da Avenida/Av. da Paz, frente ao Posto SHELL","09°40’15,99”S","035°44’25,40”W",-9.671108333333333,-35.74038888888889,Não,27.0,07:45h,Imprópria
+24,"Praia da Avenida/Av. Assis Chateaubriand, interseção com a Rua Barão de Anadia","09°40’13,56”S","035°44’07,30''W",-9.670433333333333,-35.73536111111111,Não,27.2,07:50h,Imprópria
+25,"Praia da Pajuçara/Av. Dr Antônio Gouveia, interseção com a Rua João Carneiro","09°40’24,83”S","035°42’57,66”W",-9.673563888888888,-35.71601666666667,Não,27.4,07:59h,Imprópria
+26,"Praia da Pajuçara/Av. Dr Antônio Gouveia, frente ao Restaurante Parmegiano","09°39’56,47”S","035°42’34,33”W",-9.665686111111112,-35.70953611111111,Não,27.2,08:03h,Própria
+27,"Praia da Ponta Verde/Av. Silvio Carlos Viana, frente Corretora Márcio Raposo","09°39’52,45”S","035°41’57,41”W",-9.664569444444444,-35.69928055555555,Não,27.0,08:08h,Imprópria
+28,"Praia de Ponta Verde/Av. Álvaro Otacílio, entre as Ruas General. Dr. João Saleiro Pitão e Dr.Rubens Canuto","09°39’37,96”S","035°41’48,89”W",-9.660544444444445,-35.696913888888886,Não,27.2,08:12h,Imprópria
+29,"Praia de Jatiúca/Av. Álvaro Otacílio, frente ao Hotel Maceió Atlantic","09°38’57,10”S","035°41’59,30”W",-9.649194444444444,-35.69980555555555,Não,27.4,08:15h,Imprópria
+30,"Praia de Cruz das Almas/Av. Brigadeiro Eduardo Gomes, frente ao RITZ Residence","09°38’18,60”S","035°41’53,53”W",-9.638499999999999,-35.69820277777777,Não,27.4,08:19h,Própria
+31,"Praia de Cruz das Almas/ Av. Eustáquio Gomes, frente ao Condomínio Solaris","09°37’59,14”S","035°41’48,21”W",-9.633094444444446,-35.696724999999994,Não,27.2,08:23h,Própria
+32,"Praia de Cruz das Almas/Av. Eustáquio Gomes, frente ao Leroy Merlin","09°37’42,60”S","035°41’44,01”W",-9.6285,-35.69555833333333,Não,27.3,08:30h,Própria
+33,"Praia de Jacarecica/Rua Herry V. Vieira de Paula, Frente à Rua""A”","09°36’48,55”S","035°41’15,66”W",-9.613486111111111,-35.68768333333333,Não,27.2,08:35h,Imprópria
+34,"Praia de Guaxuma/Frente à entrada principal de acesso, Ao lado do Mariali Maceió","09°35’32,25”S","035°40’05,11”W",-9.592291666666668,-35.66808611111111,Não,27.0,08:40h,Própria
+35,"Praia de Garça Torta/Frente à Rua principal, perpendicular à Rua São Pedro","09°35’00,25”S","035°36’35,26”W",-9.583402777777778,-35.60979444444445,Não,27.4,08:48h,Própria
+36,Rio Pratagy/Ponte AL,"101, Norte - 09°34’01,97”S","035°39’01,99”W",101.15944444444445,-35.650552777777776,Não,27.8,08:50h,Própria
+37,"Praia do Mirante da Sereia/Av. Beira Mar, frente à Rua de principal acesso","09°33’55,51”S","035°38’42,67”W",-9.565419444444446,-35.64518611111111,Não,27.6,08:59h,Própria
+39,"Praia de Paripueira/Av. Beira Mar, frente a Barraca do Osvaldo","09º28’16,74”S","35º32’55,76”W",-9.471316666666667,-35.54882222222222,Não,29.8,06:42h,Própria
+40,"Praia de Paripueira/Rua Jair Mendonça, ± 900 m da rua principal de acesso","09º28’09,6”S","035º32’46,50”W",-9.469333333333333,-35.54625,Não,29.6,06:08h,Própria
+41,Praia de Sonho Verde/Frente à ao Condomínio Sonho Verde,"09º27’06,55”S","035º31’46,34”W",-9.451819444444444,-35.52953888888889,Não,28.8,06:15h,Própria
+42,"Praia de Barra de Santo Antônio/Rua Projetada Um, frente à entrada do Loteamento Tabuba","09º26’24,69”S","035º31’6,41”W",-9.440191666666667,-35.51844722222222,Não,28.9,06:29h,Própria
+43,"Praia de Maré Mansa/Barra de Santo Antônio, Rua Projetada 110, Loteamento Barra Norte","09º25’27,87”S","035º30’12,14”W",-9.424408333333332,-35.503372222222225,Não,30.1,06:37h,Própria
+44,"Praia de Barra de Camaragibe/Rua São José, Inicio da Rua Beira Mar","09º18’49,37”S","035º24’53,73”W",-9.31371388888889,-35.414925,Não,29.8,07:18h,Própria
+45,"Praia S. Miguel dos Milagres/Rua Prof. Augusto de Barros Falção, frente ao Restaurante Mija Della","09º16’01,72”S","035º21’53,93” W",-9.267144444444446,-35.364980555555555,Não,30.4,07:36h,Própria
+46,Praia de Porto da Rua/Rua Agnelo João dos Santos,"09º14’39,58”S","035º20’50,80”W",-9.244327777777777,-35.34744444444445,Não,30.8,07:48h,Própria
+47.1,Praia do Patacho/ Rua do Posto Patacho,"09º11’3,67’’S","035º18’2,29” W",-9.184352777777779,-35.30063611111111,Não,28.9,08:16h,Própria
+47.2,"Praia de Lages/Acesso Principal, em frente ao Quiosqui Sol, Lua e Mar – 9° 12’ 3,357’’S e 35° 19’ 16,251’’W Não 29,9 08:27h Própria 48 Praia de Porto de Pedras/Frente à Rua Coronel Avelino","09º09’44,47”S","035º17’43,54”W",-9.162352777777778,-35.295427777777775,Não,28.7,08:37h,Própria
+49,Praia de Japaratinga/Frente à Acesso a Pousada do Alto,"09°05’39,4”S","035°15’30,5”W",-9.094277777777778,-35.258472222222224,Não,29.4,09:04h,Própria
+50,"Praia de Japaratinga/Rua Sebastião Lins de Melo, 41, Frente ao Restaurante Maria Pereira","09º05’19,55”S","035º15’23,38”W",-9.08876388888889,-35.25649444444444,Não,30.3,09:13h,Própria
+51,Praia de Maragogi/Frente à Foz do Rio Salgado,"09º04’0,27”S","035º14’32,67”W",-9.066741666666667,-35.24240833333334,Não,29.7,09:21h,Imprópria
+52,"Praia de Maragogi/Frente à Escola Manoel M. Costa, Povoado São Bento","09º03’10,25”S","035º14’22,03”W",-9.052847222222223,-35.23945277777778,Não,30.4,09:35h,Própria
+53,"Praia de Maragogi/Foz do Rio Maragogi, AL","101 Norte - 09º01’54,14”S","035º13’46,49”W",101.15027777777779,-35.22958055555556,Não,28.9,09:54h,Imprópria
+54,"Praia de Maragogi/Av. Senador Rui Palmeira, Frente ao Hotel Areias Belas","09º01’03,79”S","035º13’22,45”W",-9.017719444444445,-35.22290277777778,Não,29.4,10:06h,Própria
+55,"Praia de Maragogi/Av. Senador Rui Plameira, Frente ao Restaurante Maragomar","09º00’38,61”S","035º13’06,79”W",-9.010725,-35.21855277777778,Não,30.0,10:14h,Própria
+56,"Praia de Maragogi/Barra Grande, frente à Av. Jubarte","08º59’15,8”S","035º11’35,88”’W",-8.98772222222222,-35.193299999999994,Não,29.8,10:27h,Própria
+57,Praia de Burgalhau/Frente ao Restaurante Burgalhau – Barra Grande,"08° 59’ 51,69""S","035°12’ 23,92”W",-8.997691666666666,-35.20664444444445,Não,29.7,10:36h,Própria
+58,"Praia de Antunes/Barra Grande, Área de frequência de banhistas","08°58’33,10""S","035°10’ 49,74’’W",-8.975861111111112,-35.18048333333333,Não,30.4,10:48h,Própria
+59,"Praia de Ponta de Mangue/ Av. Estrela do Mar, frente ao Bar da Praia Porto do Sal","08°57’23,53""S","035°10’21,52""W",-8.956536111111111,-35.172644444444444,Não,30.7,11:00h,Própria
+59.1,"Praia Peroba/Frente ao acesso principal, Área de frequência de banhistas",08°56’07”S,035°10’01” W,-8.935277777777777,-35.16694444444444,Não,30.5,11:20h,Própria
+60,Praia de Maragogi/Frente à Foz do Rio Persinunga,"08º54’48,80”S","035º09’14,64”W",-8.913555555555556,-35.154066666666665,Não,29.8,11:41h,Imprópria
