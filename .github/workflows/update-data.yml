@@ -1,11 +1,11 @@
 name: Update Beach Data
 
-on:
-  schedule:
+# on:
+  # schedule:
     # Del 1 al 16 de febrero: todos los días a las 10:00 UTC
-    - cron: '0 10 1-16 2 *'
+    # - cron: '0 10 1-16 2 *'
     # Resto del año: todos los domingos a las 10:00 UTC
-    - cron: '0 10 * * 0'
+    # - cron: '0 10 * * 0'
   workflow_dispatch: # Permite ejecutar manualmente
 
 permissions:
